@@ -44,11 +44,15 @@ public class AddExpenseServlet extends HttpServlet {
         Statement statement = null;
         
         try {
+    		System.out.println("Establishing connection to DB...");
 	        dbCon = dataSource.getConnection();
+    		System.out.println("Connection established.");
             statement = dbCon.createStatement();
             
-            String query = "";
-    		statement.executeUpdate(query);
+            /*
+            String query = "SELECT * FROM expenses;";
+    		statement.executeUpdate(query);*/
+    		
     		
 		
 	        JsonObject responseJsonObject = new JsonObject();

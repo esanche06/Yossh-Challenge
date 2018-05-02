@@ -26,11 +26,27 @@
 		document.body.appendChild(text.cloneNode(true));
 	</script> 
 	<!--End Navigation bar-->
-    
+	
+	<form id="expense_form" method="post" action="#">
+	    <label><b>Date</b></label>
+	    <input type="date" name="expenseDate">
+	    <br>
+	    <label><b>Value</b></label>
+	    <input type="number" min="0" max="1000000" name="value"> <!-- Completely abitrary values for min/max -->
+	    <br>
+	    <label><b>Reason</b></label>
+	    <textarea rows="5" cols="100"></textarea>
+	    <br>
+	    <input type="submit" value="Submit Expense">
+	</form>
+	    
     <!-- Load jQuery and Bootstrap JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <script src="index.js"></script>
+    
     
 </body>
 
