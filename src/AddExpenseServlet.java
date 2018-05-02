@@ -49,12 +49,19 @@ public class AddExpenseServlet extends HttpServlet {
     		System.out.println("Connection established.");
             statement = dbCon.createStatement();
             
-            /*
-            String query = "SELECT * FROM expenses;";
-    		statement.executeUpdate(query);*/
+            String value = request.getParameter("value");
+            String expenseDate = request.getParameter("expenseDate");
+            String reason = request.getParameter("reason");
+            
+    		System.out.println(value);
+    		System.out.println(expenseDate);
+    		System.out.println(reason);
     		
-    		
-		
+            
+            String query = "INSERT INTO expenses(userId, dateOfExpense, value, reason) " + 
+            		"VALUES('1','"+expenseDate +"','"+value+"','"+reason+"');";
+    		statement.executeUpdate(query);
+    		    		
 	        JsonObject responseJsonObject = new JsonObject();
 	        responseJsonObject.addProperty("status", "success");
 	        responseJsonObject.addProperty("message", "Added expense to the DB.");
