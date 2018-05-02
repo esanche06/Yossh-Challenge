@@ -9,4 +9,6 @@ This solution focuses both on front-end and back-end, with emphasis on keeping b
 
 I chose to build this project using Maven and Tomcat because I knew I could develop the web app very quickly. I used MySQL because Java has nice plugins for database interaction.
 
-I would have liked to develop a more robust system for identifying users. Currently the web app has no way of knowing which user submitted which expense. This could have been solved by including a login page of some kind, and also keeping a table in the database which saves user info (id, name, password, etc.). 
+I would have liked to develop a more robust system for identifying users. Currently the web app has no way of knowing which user submitted which expense. This could have been solved by including a login page of some kind, and also keeping a table in the database which saves user info (id, name, password, etc.).
+
+To run the project, you can use Eclipse. You'll have to import it as a Maven project and also setup a tomcat server. Then you can run the project on the server via eclipse. I'll also get it deployed on AWS asap, so it's easier to take a look and see that it does what it's supposed to. 
